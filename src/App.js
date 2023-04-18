@@ -1,23 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { MdNavigateNext } from "react-icons/md";
 
-function App() {
+const App = () => {
+
+  const getMessages = async () => {
+    const options = {
+      metod: 'POST',
+      body: JSON.stringify({
+        message:'hello how are you?'
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+    try {
+     const response =  await fetch('http://localhost:8000/completions', options)
+     const data = await response.json()
+     console.log(data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <section className='side-bar'>
+        <button>+ New Chat</button>
+        <ul className='history'>
+          <li>BLUGH</li>
+        </ul>
+        <nav>
+          <p>Made by Chris</p>
+        </nav>
+      </section>
+      <section className='main'>
+        <h1>ChrisGpt</h1>
+        <ul className="feed">
+          
+        </ul>
+        <div className="bottom-section">
+          <div className="input-container">
+            <input/>
+            <div id='submit' onClick={getMessages}><MdNavigateNext style={{color:"blue"}}/></div>
+          </div>
+          <p className="info">
+            Chat GPT Version
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
