@@ -4,9 +4,9 @@ const App = () => {
 
   const getMessages = async () => {
     const options = {
-      metod: 'POST',
+      metod: "POST",
       body: JSON.stringify({
-        message:'hello how are you?'
+        message:"hello how are you?"
       }),
       headers: {
         "Content-Type": "application/json"
