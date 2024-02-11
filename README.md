@@ -14,7 +14,7 @@ Frameworks & Library
 
 <a href="https://it.legacy.reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"> </a>
 
-Lenguage
+language
 
 <a href="https://www.javascript.com/" target="_blank" rel="noreferref"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/></a>
 <a href="https://www.w3schools.com/Css/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"></a>
